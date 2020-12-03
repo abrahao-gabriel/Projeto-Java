@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Site de Música</title>
+    </head>
+    <body>
+        <p id="sucesso">Música adicionada com sucesso!</p>
+        
+   		<table>
+     		<thead>
+           		<tr>
+            		<th>Id</th>
+            		<th>Nome da música</th>
+            		<th>Artista(s)</th>
+            		<th>Gravadora</th>
+            		<th>Estilo de música</th>
+           		</tr>
+      		</thead>
+      		<tbody>
+      			<tr th:each="musica : ${musicas}">
+      				<td th:text="${musica.id}"></td>
+      				<td th:text="${musica.nome}"></td>
+      				<td th:text="${musica.artista}"></td>
+      				<td th:text="${musica.gravadora}"></td>
+      				<td th:text="${musica.estilo}"></td>
+      			</tr>
+      		</tbody>
+		</table>
+        
+    </body>
+</html>

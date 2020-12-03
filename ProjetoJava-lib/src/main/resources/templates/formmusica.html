@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Site de Música</title>
+    </head>
+    <body>
+        <h1>Email</h1>
+        <div id="menu">
+            <h2>Login</h2>
+            <form action="#" th:action="@{/musica}" th:object="${musica}" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" th:field="*{nome}" required placeholder="Nome da Música" size="30">
+                <label for="artista">Artista</label>
+                <input type="text" name="artista" th:field="*{artista}" required placeholder="Nome do Artista" size="30">
+                <label for="gravadora">Gravadora</label>
+                <input type="text" name="gravadora" th:field="*{gravadora}" required placeholder="Nome da Gravadora" size="30">
+                <label for="estilo">Estilo</label>
+                <input type="text" name="estilo" th:field="*{estilo}" required placeholder="Estilo de música (Samba, etc)" size="30">
+                <input id="button" type="submit" value="Cadastrar">
+            </form>
+        </div>
+    </body>
+</html>

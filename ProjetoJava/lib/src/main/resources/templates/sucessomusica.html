@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Site de Música</title>
+    </head>
+    <body>
+        <p id="sucesso">Música adicionada com sucesso!</p>
+        <div id="menu">
+            <div th:text="'Nome : ' + ${musica.nome}"></div>
+            <div th:text="'Artista : ' + ${musica.artista}"></div>
+            <div th:text="'Gravadora : ' + ${musica.gravadora}"></div>
+            <div th:text="'Estilo : ' + ${musica.estilo}"></div>
+            <a th:href="@{/musica}"><button id="bred">Voltar</button></a>
+        </div>
+    </body>
+</html>
