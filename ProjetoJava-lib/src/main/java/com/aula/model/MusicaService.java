@@ -23,4 +23,8 @@ public class MusicaService {
 	  public List<Map<String, Object>> getMusicas(){
 		  return mdao.getMusicas();
 	  }
+	  
+	  public void deleteMusica(int id) {
+		  mdao.deleteMusica(id);
+	  }
 }

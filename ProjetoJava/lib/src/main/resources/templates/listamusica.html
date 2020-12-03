@@ -26,6 +26,11 @@
       				<td th:text="${musica.artista}"></td>
       				<td th:text="${musica.gravadora}"></td>
       				<td th:text="${musica.estilo}"></td>
+      				<td>
+      					<form th:action="@{'apagar/' + ${musica.id}}" method="post">
+      						<input type="submit" value="X">
+      					</form>
+      				</td>
       			</tr>
       		</tbody>
 		</table>

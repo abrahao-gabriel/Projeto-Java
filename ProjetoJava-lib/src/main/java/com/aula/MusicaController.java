@@ -54,4 +54,10 @@ public class MusicaController {
 		return "listamusica";
 	}
 	
+	@PostMapping("/apagar/{id}")
+	public String deletar(@PathVariable("id") int id, Model model) {
+		MusicaService mdao = context.getBean(MusicaService.class);
+		mdao.deleteMusica(id);
+		return "redirect:/musicas";
+	}
 }
