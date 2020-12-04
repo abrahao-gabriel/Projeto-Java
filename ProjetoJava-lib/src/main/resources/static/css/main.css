@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body{
+    background-color: rgb(65,76,89);
+    color: #fff;
+    margin:0;
+    padding:0;
+}
+
+h1{
+    font-family: 'Audiowide', cursive;
+    margin: 20px;
+    font-size: 100px;
+    text-align: center;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 2px rgba(206,89,55,0);
+}
+#menunav{
+	width: 100%;
+    background-color: rgb(90,105,120);
+    padding: 1px;
+}
+#menunav nav ul{
+	list-style-type:none;
+}
+#menunav nav ul li{
+	display:inline-block;
+	margin: 0 20px;
+}
+a{
+	font-family: 'Audiowide', cursive;
+	text-decoration: none;
+	color: #fff;
+}
+#menu{
+    width: 35%;
+    margin: auto;
+    background-color: rgb(90,105,120);
+    border-radius: 30px;
+    padding: 10px 0 10px 0;
+}
+#menu h2{
+    font-family: 'Audiowide', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+#menu input{
+    display: block;
+    margin: auto;
+}
+#menu label{
+    display: block;
+    text-align: center;
+    margin: 20px 0 0 0;
+    color: #fff;
+}
+#menu #button{
+    background-color:rgb(106, 114, 124);
+    color: #FFF;
+    display: block;
+    margin:10px auto;
+    padding:7px 15px;
+    border-radius: 20px;
+    border: 2px rgb(81, 255, 95) solid;
+}

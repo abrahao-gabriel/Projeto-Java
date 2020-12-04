@@ -3,15 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="main.css">
+        <link href="css/main.css" rel="stylesheet">
         <title>Site de Música</title>
     </head>
     <body>
-        <nav>
-        	<ul>
-        		<li><a th:href="@{/musica}">Cadastrar Música</a></li>
-        		<li><a th:href="@{/musicas}">Lista de Músicas</a></li>
-        	</ul>
-        </nav>
+    	<div id="menunav">
+	        <nav>
+	        	<ul>
+	        		<li><a th:href="@{/musica}">Cadastrar Música</a></li>
+	        		<li><a th:href="@{/artista}">Cadastrar Artista</a></li>
+	        		<li><a th:href="@{/gravadora}">Cadastrar Gravadora</a></li>
+	        		<li><a th:href="@{/musicas}">Lista de Músicas</a></li>
+	        		<li><a th:href="@{/artistas}">Lista de Artistas</a></li>
+	        		<li><a th:href="@{/gravadoras}">Lista de Gravadoras</a></li>
+	        	</ul>
+	        </nav>
+	  	</div>
     </body>
 </html>
