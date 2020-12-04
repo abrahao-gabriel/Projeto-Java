@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Gravadora</title>
+    </head>
+    <body>
+        
+        <h1>Lista de gravadoras</h1>
+   		<table>
+     		<thead>
+           		<tr>
+            		<th>Id</th>
+            		<th>Nome</th>
+            		<th>Email</th>
+            		<th></th>
+            		<th></th>
+           		</tr>
+      		</thead>
+      		<tbody>
+      			<tr th:each="gravadora : ${gravadoras}">
+      				<td th:text="${gravadora.id}"></td>
+      				<td th:text="${gravadora.nome}"></td>
+      				<td th:text="${gravadora.email}"></td>
+      				<td>
+      					<a th:href="@{'updG/' + ${gravadora.id}}">Editar</a>
+      				</td>
+      				<td>
+      					<form th:action="@{'apagarG/' + ${gravadora.id}}" method="post">
+      						<input type="submit" value="X">
+      					</form>
+      				</td>
+      			</tr>
+      		</tbody>
+		</table>
+        
+    </body>
+</html>

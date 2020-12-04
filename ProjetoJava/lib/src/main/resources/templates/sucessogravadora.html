@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Site de Música</title>
+    </head>
+    <body>
+        <p id="sucesso">Gravadora adicionada com sucesso!</p>
+        <div id="menu">
+            <div th:text="'Nome : ' + ${gravadora.nome}"></div>
+            <div th:text="'Email : ' + ${gravadora.email}"></div>
+            <a th:href="@{/gravadora}"><button id="bred">Voltar</button></a>
+        </div>
+    </body>
+</html>

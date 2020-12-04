@@ -26,7 +26,7 @@ public class GravadoraUpdController {
 		GravadoraService gdao = context.getBean(GravadoraService.class);
 		Map<String,Object> antigoG = gdao.getGravadora(id);
 		Gravadora gravadora = new Gravadora((String)antigoG.get("nome"), (String)antigoG.get("email"));
-		model.addAttribute("antigoG",Gravadora);
+		model.addAttribute("antigoG",gravadora);
 		model.addAttribute("id");
 		return "formgravadoraupd";
 	}
