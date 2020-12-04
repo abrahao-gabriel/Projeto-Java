@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Editar Artista</title>
+    </head>
+    <body>
+        <h1>Email</h1>
+        <div id="menu">
+            <h2>Editar Artista</h2>
+            <form action="#" th:action="@{'/updA/' + ${id}}" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" th:field="${antigoA.nome}" required placeholder="Nome do Artista" size="30">
+                <label for="email">Email</label>
+                <input type="text" name="email" th:field="${antigoA.email}" required placeholder="Email do Artista" size="30">
+                <input id="button" type="submit" value="Editar">
+            </form>
+        </div>
+    </body>
+</html>
