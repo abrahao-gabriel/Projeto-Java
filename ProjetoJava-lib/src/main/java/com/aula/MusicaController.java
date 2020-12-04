@@ -8,6 +8,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -28,7 +29,7 @@ public class MusicaController {
 	}
 	
 	@PostMapping("/musica")
-	public String acao(Musica musica, Model model) {
+	public String acao(@ModelAttribute Musica musica, Model model) {
 		model.addAttribute("musica", musica);
 		MusicaService mdao = context.getBean(MusicaService.class);
 		mdao.insert(musica);

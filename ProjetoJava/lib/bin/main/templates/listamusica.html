@@ -7,8 +7,8 @@
         <title>Site de Música</title>
     </head>
     <body>
-        <p id="sucesso">Música adicionada com sucesso!</p>
         
+        <h1>Lista de músicas</h1>
    		<table>
      		<thead>
            		<tr>
@@ -17,6 +17,8 @@
             		<th>Artista(s)</th>
             		<th>Gravadora</th>
             		<th>Estilo de música</th>
+            		<th></th>
+            		<th></th>
            		</tr>
       		</thead>
       		<tbody>
@@ -26,6 +28,9 @@
       				<td th:text="${musica.artista}"></td>
       				<td th:text="${musica.gravadora}"></td>
       				<td th:text="${musica.estilo}"></td>
+      				<td>
+      					<a th:href="@{'upd/' + ${musica.id}}">Editar</a>
+      				</td>
       				<td>
       					<form th:action="@{'apagar/' + ${musica.id}}" method="post">
       						<input type="submit" value="X">

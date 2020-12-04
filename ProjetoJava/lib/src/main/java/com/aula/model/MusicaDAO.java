@@ -49,4 +49,12 @@ public class MusicaDAO {
         String sql = "DELETE FROM musica WHERE id = ?" ;
        jdbc.update(sql, new Object[]{id});
     }
+    
+    //EDITA
+    public void updateMusica(int id, Musica musica) {
+    	String sql = "UPDATE musica SET nome = ?, artista = ?, gravadora = ?, estilo = ? WHERE id = ?";
+    	jdbc.update(sql, new Object[]{
+    			musica.getNome(), musica.getArtista(), musica.getGravadora(), musica.getEstilo(), id
+    	});
+    }
 }

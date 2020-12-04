@@ -27,4 +27,8 @@ public class MusicaService {
 	  public void deleteMusica(int id) {
 		  mdao.deleteMusica(id);
 	  }
+	  
+	  public void updateMusica(int id, Musica musica) {
+		  mdao.updateMusica(id, musica);
+	  }
 }
