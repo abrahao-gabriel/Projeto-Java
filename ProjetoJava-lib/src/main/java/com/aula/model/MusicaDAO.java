@@ -23,7 +23,7 @@ public class MusicaDAO {
         jdbc = new JdbcTemplate(dataSource);
     }
     
-    //INSERE musica
+    //INSERE
     public void insert(Musica musica) {
         String sql = "INSERT INTO musica " + "(nome,artista,gravadora,estilo) VALUES (?,?,?,?)" ;
        jdbc.update(sql, new Object[]{
@@ -39,7 +39,7 @@ public class MusicaDAO {
     
     //SELECIONA TUDO
     public List<Map<String,Object>> getMusicas(){
-    	String sql = "SELECT * FROM musica";
+    	String sql = "SELECT * FROM musica ORDER BY id";
     	List<Map<String,Object>> musicas = (List<Map<String,Object>>) jdbc.queryForList(sql);
     	return musicas;
     }
