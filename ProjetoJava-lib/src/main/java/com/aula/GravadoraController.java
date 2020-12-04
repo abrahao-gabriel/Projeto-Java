@@ -49,7 +49,7 @@ public class GravadoraController {
 	//listar tudo
 	@GetMapping("/gravadoras")
 	public String listarG(Model model) {
-		GravadorasService gdao = context.getBean(GravadoraService.class);
+		GravadoraService gdao = context.getBean(GravadoraService.class);
 		List<Map<String,Object>> gravadoras = gdao.getGravadoras();
 		model.addAttribute("gravadoras",gravadoras);
 		return "listagravadora";
