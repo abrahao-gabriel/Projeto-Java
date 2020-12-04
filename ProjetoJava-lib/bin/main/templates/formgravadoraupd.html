@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="main.css">
+        <title>Editar Gravadora</title>
+    </head>
+    <body>
+        <h1>Email</h1>
+        <div id="menu">
+            <h2>Editar Gravadora</h2>
+            <form action="#" th:action="@{'/updG/' + ${id}}" method="POST">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" th:field="${antigoG.nome}" required placeholder="Nome da Gravadora" size="30">
+                <label for="email">Email</label>
+                <input type="text" name="email" th:field="${antigoG.email}" required placeholder="Email da Gravadora" size="30">
+                <input id="button" type="submit" value="Editar">
+            </form>
+        </div>
+    </body>
+</html>
