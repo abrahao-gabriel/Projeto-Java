@@ -3,11 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="main.css">
-        <title>Site de Música</title>
+        <link href="css/main.css" rel="stylesheet">
+        <title>Array[Music]</title>
     </head>
     <body>
-        
+        <div id="menunav">
+	        <nav>
+	        	<ul>
+		        	<li class="p" id="logo">
+		        		<a th:href="@{/}">Array[Music]</a>
+		        	</li>
+	        		<li class="dropdown p">
+	        			Cadastrar 
+	        			<ul class="dropdown-content">
+			        		<li><a th:href="@{/musica}">Música</a></li>
+			        		<li><a th:href="@{/artista}">Artista</a></li>
+			        		<li><a th:href="@{/gravadora}">Gravadora</a></li>
+			        	</ul>
+	        		</li>
+	        		<li class="dropdown p">
+	        			Listar
+			        	<ul class="dropdown-content">
+			        		<li><a th:href="@{/musicas}">Músicas</a></li>
+			        		<li><a th:href="@{/artistas}">Artistas</a></li>
+			        		<li><a th:href="@{/gravadoras}">Gravadoras</a></li>
+			        	</ul>
+			        </li>
+	        	</ul>
+	        </nav>
+	  	</div>
         <h1>Lista de músicas</h1>
    		<table>
      		<thead>
@@ -29,11 +53,11 @@
       				<td th:text="${musica.gravadora}"></td>
       				<td th:text="${musica.estilo}"></td>
       				<td>
-      					<a th:href="@{'upd/' + ${musica.id}}">Editar</a>
+      					<a class="edit" th:href="@{'upd/' + ${musica.id}}">Editar</a>
       				</td>
       				<td>
       					<form th:action="@{'apagar/' + ${musica.id}}" method="post">
-      						<input type="submit" value="X">
+      						<input class="x" type="submit" value="X">
       					</form>
       				</td>
       			</tr>

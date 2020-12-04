@@ -3,13 +3,37 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="main.css">
-        <title>Música</title>
+        <link href="css/main.css" rel="stylesheet">
+        <title>Array[Music]</title>
     </head>
     <body>
-        <h1>Email</h1>
+    	<div id="menunav">
+	        <nav>
+	        	<ul>
+		        	<li class="p" id="logo">
+		        		<a th:href="@{/}">Array[Music]</a>
+		        	</li>
+	        		<li class="dropdown p">
+	        			Cadastrar 
+	        			<ul class="dropdown-content">
+			        		<li><a th:href="@{/musica}">Música</a></li>
+			        		<li><a th:href="@{/artista}">Artista</a></li>
+			        		<li><a th:href="@{/gravadora}">Gravadora</a></li>
+			        	</ul>
+	        		</li>
+	        		<li class="dropdown p">
+	        			Listar
+			        	<ul class="dropdown-content">
+			        		<li><a th:href="@{/musicas}">Músicas</a></li>
+			        		<li><a th:href="@{/artistas}">Artistas</a></li>
+			        		<li><a th:href="@{/gravadoras}">Gravadoras</a></li>
+			        	</ul>
+			        </li>
+	        	</ul>
+	        </nav>
+	  	</div>
         <div id="menu">
-            <h2>Música</h2>
+            <h2>Cadastrar Música</h2>
             <form action="#" th:action="@{/musica}" th:object="${musica}" method="POST">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" th:field="*{nome}" required placeholder="Nome da Música" size="30">
@@ -19,7 +43,7 @@
                 <input type="text" name="gravadora" th:field="*{gravadora}" required placeholder="Nome da Gravadora" size="30">
                 <label for="estilo">Estilo</label>
                 <input type="text" name="estilo" th:field="*{estilo}" required placeholder="Estilo de música (Samba, etc)" size="30">
-                <input id="button" type="submit" value="Cadastrar">
+                <input id="bgreen" class="button" type="submit" value="Cadastrar">          
             </form>
         </div>
     </body>

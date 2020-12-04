@@ -3,15 +3,42 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="main.css">
-        <title>Site de Música</title>
+        <link rel="stylesheet" href="css/main.css">
+        <title>Array[Music]</title>
     </head>
     <body>
-        <p id="sucesso">Gravadora adicionada com sucesso!</p>
+	    <div id="menunav">
+		        <nav>
+		        	<ul>
+			        	<li class="p" id="logo">
+			        		<a th:href="@{/}">Array[Music]</a>
+			        	</li>
+		        		<li class="dropdown p">
+		        			Cadastrar 
+		        			<ul class="dropdown-content">
+				        		<li><a th:href="@{/musica}">Música</a></li>
+				        		<li><a th:href="@{/artista}">Artista</a></li>
+				        		<li><a th:href="@{/gravadora}">Gravadora</a></li>
+				        	</ul>
+		        		</li>
+		        		<li class="dropdown p">
+		        			Listar
+				        	<ul class="dropdown-content">
+				        		<li><a th:href="@{/musicas}">Músicas</a></li>
+				        		<li><a th:href="@{/artistas}">Artistas</a></li>
+				        		<li><a th:href="@{/gravadoras}">Gravadoras</a></li>
+				        	</ul>
+				        </li>
+		        	</ul>
+		        </nav>
+		  	</div>
         <div id="menu">
+        	<div id="dados">
+        	<p id="sucesso">Gravadora adicionada com sucesso!</p>
             <div th:text="'Nome : ' + ${gravadora.nome}"></div>
             <div th:text="'Email : ' + ${gravadora.email}"></div>
-            <a th:href="@{/gravadora}"><button id="bred">Voltar</button></a>
+            <a th:href="@{/gravadora}"><button class="button" id="bred">Voltar</button></a>
+            </div>
         </div>
     </body>
 </html>

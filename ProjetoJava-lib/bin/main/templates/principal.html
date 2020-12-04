@@ -4,20 +4,43 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
         <link href="css/main.css" rel="stylesheet">
-        <title>Site de Música</title>
+        <title>Array[Music]</title>
     </head>
     <body>
     	<div id="menunav">
 	        <nav>
 	        	<ul>
-	        		<li><a th:href="@{/musica}">Cadastrar Música</a></li>
-	        		<li><a th:href="@{/artista}">Cadastrar Artista</a></li>
-	        		<li><a th:href="@{/gravadora}">Cadastrar Gravadora</a></li>
-	        		<li><a th:href="@{/musicas}">Lista de Músicas</a></li>
-	        		<li><a th:href="@{/artistas}">Lista de Artistas</a></li>
-	        		<li><a th:href="@{/gravadoras}">Lista de Gravadoras</a></li>
+		        	<li class="p" id="logo">
+		        		<a th:href="@{/}">Array[Music]</a>
+		        	</li>
+	        		<li class="dropdown p">
+	        			Cadastrar 
+	        			<ul class="dropdown-content">
+			        		<li><a th:href="@{/musica}">Música</a></li>
+			        		<li><a th:href="@{/artista}">Artista</a></li>
+			        		<li><a th:href="@{/gravadora}">Gravadora</a></li>
+			        	</ul>
+	        		</li>
+	        		<li class="dropdown p">
+	        			Listar
+			        	<ul class="dropdown-content">
+			        		<li><a th:href="@{/musicas}">Músicas</a></li>
+			        		<li><a th:href="@{/artistas}">Artistas</a></li>
+			        		<li><a th:href="@{/gravadoras}">Gravadoras</a></li>
+			        	</ul>
+			        </li>
 	        	</ul>
 	        </nav>
+	  	</div>
+	  	<div id="banner">
+	  		<p id="bv">Bem vindo ao</p>
+	  		<h1>Array[Music]</h1>
+	  		<p class="desc">
+	  			Projeto de Desenvolvimento para Servidores I
+	  		</p>
+	  		<p class="desc">
+	  			Desenvolvido por Gabriel de Almeida Abrahão e Marcelo de Castro Marieto Silva
+	  		</p>
 	  	</div>
     </body>
 </html>

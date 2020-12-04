@@ -3,19 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=d  evice-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="main.css">
-        <title>Gravadora</title>
+        <link href="css/main.css" rel="stylesheet">
+        <title>Array[Music]</title>
     </head>
     <body>
-        <h1>Email</h1>
+    	<div id="menunav">
+	        <nav>
+	        	<ul>
+		        	<li class="p" id="logo">
+		        		<a th:href="@{/}">Array[Music]</a>
+		        	</li>
+	        		<li class="dropdown p">
+	        			Cadastrar 
+	        			<ul class="dropdown-content">
+			        		<li><a th:href="@{/musica}">Música</a></li>
+			        		<li><a th:href="@{/artista}">Artista</a></li>
+			        		<li><a th:href="@{/gravadora}">Gravadora</a></li>
+			        	</ul>
+	        		</li>
+	        		<li class="dropdown p">
+	        			Listar
+			        	<ul class="dropdown-content">
+			        		<li><a th:href="@{/musicas}">Músicas</a></li>
+			        		<li><a th:href="@{/artistas}">Artistas</a></li>
+			        		<li><a th:href="@{/gravadoras}">Gravadoras</a></li>
+			        	</ul>
+			        </li>
+	        	</ul>
+	        </nav>
+	  	</div>
         <div id="menu">
-            <h2>Gravadora</h2>
+            <h2>Cadastrar Gravadora</h2>
             <form action="#" th:action="@{/gravadora}" th:object="${gravadora}" method="POST">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" th:field="*{nome}" required placeholder="Nome da Gravadora" size="30">
                 <label for="email">Email</label>
                 <input type="text" name="email" th:field="*{email}" required placeholder="Email da Gravadora" size="30">
-                <input id="button" type="submit" value="Cadastrar">
+                <input id="bgreen" class="button" type="submit" value="Cadastrar">
             </form>
         </div>
     </body>
